@@ -1,0 +1,102 @@
+
+Test 0:
+in none
+final 0
+
+Test 1:
+in none
+final 2,1
+
+Test 2:
+in none
+a = 1,0,1
+final a
+
+Test 3:
+in none
+a = 1
+b = 1
+c = 1
+final a,b,c
+
+Test 4:
+in none
+a = 1,0,0,0,1,0,0,1,0
+b = a1 ^ a4 ^ a8
+final b
+
+Test 5:
+in none
+a = 1,0,0,1,0
+final a0,a1,a2,a3,a4
+
+Test 6:
+in a
+b = a2,a1,a0
+final b
+
+Test 7:
+in a
+b = a*a - a
+final b12,b11,b10,b9,b8,b7,b6,b5
+
+Test 8:
+in x, y
+z = x * y % 115
+z = z / 7
+final z+1,1
+
+Test 9:
+in x
+and = x15 & x14 & x13 & x12 & x11 & x10 & x9 & x8 & x7 & x6 & x5 & x4 & x3 & x2 & x1 & x0
+or =  x15 | x14 | x13 | x12 | x11 | x10 | x9 | x8 | x7 | x6 | x5 | x4 | x3 | x2 | x1 | x0
+xor = x15 ^ x14 ^ x13 ^ x12 ^ x11 ^ x10 ^ x9 ^ x8 ^ x7 ^ x6 ^ x5 ^ x4 ^ x3 ^ x2 ^ x1 ^ x0
+final and,xor,or
+
+Test 10:
+in x
+y = 1,0,0,1,0,0,1
+index = 3
+final !y[2]
+
+Test 11:
+in none
+y = ~(15 % 10)
+z = y0,y2,y1,y3
+w = z / 3
+final w
+
+Test 12:
+in none
+y = ~(15 % 10)
+y = y1,y3,y0,y0
+y = y / 3
+final y+1
+
+Test 13:
+in none
+x = 1,0,0
+final (x2,x1,x0) [ x2,x1 ]
+
+Test 14:
+in none
+x = ((1,0,0) + (1)) ^ (1,1,1)
+final x
+
+Test 15:
+in a
+final a10,a9,a8,a7,a6,a5,a4,a3,a2,a1
+
+Test 16:
+in x,y
+xinv = expand (x31)
+yinv = expand (y31)
+absx = (x ^ xinv) + x31
+absy = (y ^ yinv) + y31
+final (absx - absy)*(absx-absy)
+
+Test 17:
+in a
+a = reduce+ (a)
+final a
+

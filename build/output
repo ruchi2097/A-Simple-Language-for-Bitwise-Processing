@@ -1,0 +1,740 @@
+; ModuleID = 'test_0'
+source_filename = "test_0"
+
+define i32 @test_0() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+FINAL
+NUMBER 0
+; ModuleID = 'test_1'
+source_filename = "test_1"
+
+define i32 @test_1() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+FINAL
+NUMBER 2
+COMMA
+NUMBER 1
+ENDLINE
+; ModuleID = 'test_2'
+source_filename = "test_2"
+
+define i32 @test_2() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+ENDLINE
+FINAL
+ID a
+ENDLINE
+; ModuleID = 'test_3'
+source_filename = "test_3"
+
+define i32 @test_3() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+ENDLINE
+ID b
+ASSIGN
+NUMBER 1
+ENDLINE
+ID c
+ASSIGN
+NUMBER 1
+ENDLINE
+FINAL
+ID a
+COMMA
+ID b
+COMMA
+ID c
+ENDLINE
+; ModuleID = 'test_4'
+source_filename = "test_4"
+
+define i32 @test_4() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+ENDLINE
+ID b
+ASSIGN
+ID a
+NUMBER 1
+XOR
+ID a
+NUMBER 4
+XOR
+ID a
+NUMBER 8
+ENDLINE
+FINAL
+ID b
+; ModuleID = 'test_5'
+source_filename = "test_5"
+
+define i32 @test_5() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+ENDLINE
+FINAL
+ID a
+NUMBER 0
+COMMA
+ID a
+NUMBER 1
+COMMA
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 3
+COMMA
+ID a
+NUMBER 4
+ENDLINE
+; ModuleID = 'test_6'
+source_filename = "test_6"
+
+define i32 @test_6() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+ID b
+ASSIGN
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 1
+COMMA
+ID a
+NUMBER 0
+ENDLINE
+FINAL
+ID b
+; ModuleID = 'test_7'
+source_filename = "test_7"
+
+define i32 @test_7() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+ID b
+ASSIGN
+ID a
+MUL
+ID a
+MINUS
+ID a
+ENDLINE
+FINAL
+ID b
+NUMBER 12
+COMMA
+ID b
+NUMBER 11
+COMMA
+ID b
+NUMBER 10
+COMMA
+ID b
+NUMBER 9
+COMMA
+ID b
+NUMBER 8
+COMMA
+ID b
+NUMBER 7
+COMMA
+ID b
+NUMBER 6
+COMMA
+ID b
+NUMBER 5
+; ModuleID = 'test_8'
+source_filename = "test_8"
+
+define i32 @test_8() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+COMMA
+ID y
+ENDLINE
+ID z
+ASSIGN
+ID x
+MUL
+ID y
+MOD
+NUMBER 115
+ENDLINE
+ID z
+ASSIGN
+ID z
+DIV
+NUMBER 7
+ENDLINE
+FINAL
+ID z
+PLUS
+NUMBER 1
+COMMA
+NUMBER 1
+; ModuleID = 'test_9'
+source_filename = "test_9"
+
+define i32 @test_9() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+ENDLINE
+ID and
+ASSIGN
+ID x
+NUMBER 15
+AND
+ID x
+NUMBER 14
+AND
+ID x
+NUMBER 13
+AND
+ID x
+NUMBER 12
+AND
+ID x
+NUMBER 11
+AND
+ID x
+NUMBER 10
+AND
+ID x
+NUMBER 9
+AND
+ID x
+NUMBER 8
+AND
+ID x
+NUMBER 7
+AND
+ID x
+NUMBER 6
+AND
+ID x
+NUMBER 5
+AND
+ID x
+NUMBER 4
+AND
+ID x
+NUMBER 3
+AND
+ID x
+NUMBER 2
+AND
+ID x
+NUMBER 1
+AND
+ID x
+NUMBER 0
+ENDLINE
+ID or
+ASSIGN
+ID x
+NUMBER 15
+OR
+ID x
+NUMBER 14
+OR
+ID x
+NUMBER 13
+OR
+ID x
+NUMBER 12
+OR
+ID x
+NUMBER 11
+OR
+ID x
+NUMBER 10
+OR
+ID x
+NUMBER 9
+OR
+ID x
+NUMBER 8
+OR
+ID x
+NUMBER 7
+OR
+ID x
+NUMBER 6
+OR
+ID x
+NUMBER 5
+OR
+ID x
+NUMBER 4
+OR
+ID x
+NUMBER 3
+OR
+ID x
+NUMBER 2
+OR
+ID x
+NUMBER 1
+OR
+ID x
+NUMBER 0
+ENDLINE
+ID xor
+ASSIGN
+ID x
+NUMBER 15
+XOR
+ID x
+NUMBER 14
+XOR
+ID x
+NUMBER 13
+XOR
+ID x
+NUMBER 12
+XOR
+ID x
+NUMBER 11
+XOR
+ID x
+NUMBER 10
+XOR
+ID x
+NUMBER 9
+XOR
+ID x
+NUMBER 8
+XOR
+ID x
+NUMBER 7
+XOR
+ID x
+NUMBER 6
+XOR
+ID x
+NUMBER 5
+XOR
+ID x
+NUMBER 4
+XOR
+ID x
+NUMBER 3
+XOR
+ID x
+NUMBER 2
+XOR
+ID x
+NUMBER 1
+XOR
+ID x
+NUMBER 0
+ENDLINE
+FINAL
+ID and
+COMMA
+ID xor
+COMMA
+ID or
+; ModuleID = 'test_10'
+source_filename = "test_10"
+
+define i32 @test_10() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+ENDLINE
+ID y
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+ENDLINE
+ID index
+ASSIGN
+NUMBER 3
+ENDLINE
+FINAL
+BINV
+ID y
+LBRACKET
+NUMBER 2
+RBRACKET
+ENDLINE
+; ModuleID = 'test_11'
+source_filename = "test_11"
+
+define i32 @test_11() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID y
+ASSIGN
+INV
+LPAREN
+NUMBER 15
+MOD
+NUMBER 10
+RPAREN
+ENDLINE
+ID z
+ASSIGN
+ID y
+NUMBER 0
+COMMA
+ID y
+NUMBER 2
+COMMA
+ID y
+NUMBER 1
+COMMA
+ID y
+NUMBER 3
+ENDLINE
+ID w
+ASSIGN
+ID z
+DIV
+NUMBER 3
+ENDLINE
+FINAL
+ID w
+ENDLINE
+; ModuleID = 'test_12'
+source_filename = "test_12"
+
+define i32 @test_12() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID y
+ASSIGN
+INV
+LPAREN
+NUMBER 15
+MOD
+NUMBER 10
+RPAREN
+ENDLINE
+ID y
+ASSIGN
+ID y
+NUMBER 1
+COMMA
+ID y
+NUMBER 3
+COMMA
+ID y
+NUMBER 0
+COMMA
+ID y
+NUMBER 0
+ENDLINE
+ID y
+ASSIGN
+ID y
+DIV
+NUMBER 3
+ENDLINE
+FINAL
+ID y
+PLUS
+NUMBER 1
+ENDLINE
+; ModuleID = 'test_13'
+source_filename = "test_13"
+
+define i32 @test_13() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID x
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+ENDLINE
+FINAL
+LPAREN
+ID x
+NUMBER 2
+COMMA
+ID x
+NUMBER 1
+COMMA
+ID x
+NUMBER 0
+RPAREN
+LBRACKET
+ID x
+NUMBER 2
+COMMA
+ID x
+NUMBER 1
+RBRACKET
+; ModuleID = 'test_14'
+source_filename = "test_14"
+
+define i32 @test_14() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID x
+ASSIGN
+LPAREN
+LPAREN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+RPAREN
+PLUS
+LPAREN
+NUMBER 1
+RPAREN
+RPAREN
+XOR
+LPAREN
+NUMBER 1
+COMMA
+NUMBER 1
+COMMA
+NUMBER 1
+RPAREN
+ENDLINE
+FINAL
+ID x
+; ModuleID = 'test_15'
+source_filename = "test_15"
+
+define i32 @test_15() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+FINAL
+ID a
+NUMBER 10
+COMMA
+ID a
+NUMBER 9
+COMMA
+ID a
+NUMBER 8
+COMMA
+ID a
+NUMBER 7
+COMMA
+ID a
+NUMBER 6
+COMMA
+ID a
+NUMBER 5
+COMMA
+ID a
+NUMBER 4
+COMMA
+ID a
+NUMBER 3
+COMMA
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 1
+ENDLINE
+; ModuleID = 'test_16'
+source_filename = "test_16"
+
+define i32 @test_16() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+COMMA
+ID y
+ENDLINE
+ID xinv
+ASSIGN
+EXPAND
+LPAREN
+ID x
+NUMBER 31
+RPAREN
+ENDLINE
+ID yinv
+ASSIGN
+EXPAND
+LPAREN
+ID y
+NUMBER 31
+RPAREN
+ENDLINE
+ID absx
+ASSIGN
+LPAREN
+ID x
+XOR
+ID xinv
+RPAREN
+PLUS
+ID x
+NUMBER 31
+ENDLINE
+ID absy
+ASSIGN
+LPAREN
+ID y
+XOR
+ID yinv
+RPAREN
+PLUS
+ID y
+NUMBER 31
+ENDLINE
+FINAL
+LPAREN
+ID absx
+MINUS
+ID absy
+RPAREN
+MUL
+LPAREN
+ID absx
+MINUS
+ID absy
+RPAREN
+; ModuleID = 'test_17'
+source_filename = "test_17"
+
+define i32 @test_17() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+ID a
+ASSIGN
+REDUCE
+PLUS
+LPAREN
+ID a
+RPAREN
+ENDLINE
+FINAL
+ID a
+ENDLINE

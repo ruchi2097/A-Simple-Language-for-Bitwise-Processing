@@ -1,0 +1,70 @@
+Usage 1 0.00472058
+Fail-fail_1 1 0.00856942
+Fail-fail_2 1 0.00763679
+Fail-fail_3 0 0
+Fail-fail_4 0 0
+466-test_0 1 0.00480758
+InstCount-test_0 1 0.165391
+466-test_1 0 0
+InstCount-test_1 1 0.00324387
+466-test_2 0 0
+InstCount-test_2 1 0.00381004
+466-test_3 0 0
+InstCount-test_3 1 0.00333904
+466-test_4 0 0
+InstCount-test_4 1 0.00323762
+466-test_5 0 0
+InstCount-test_5 1 0.00363454
+466-test_6 0 0
+InstCount-test_6 1 0.00359283
+466-test_7 0 0
+InstCount-test_7 1 0.00337683
+466-test_8 0 0
+InstCount-test_8 1 0.00302404
+466-test_15 0 0
+InstCount-test_15 1 0.00406733
+566-test_9 0 0
+InstCount-test_9 1 0.00273625
+566-test_10 0 0
+InstCount-test_10 1 0.00332146
+566-test_11 0 0
+InstCount-test_11 1 0.00329171
+566-test_12 0 0
+InstCount-test_12 1 0.003272
+566-test_13 0 0
+InstCount-test_13 1 0.00363621
+566-test_14 0 0
+InstCount-test_14 1 0.00348604
+566-test_16 0 0
+InstCount-test_16 1 0.00333917
+566-test_17 0 0
+InstCount-test_17 1 0.00382429
+566-flip 0 0
+InstCount-flip 1 0.00322779
+566-syndrome_ecc 0 0
+InstCount-syndrome_ecc 1 0.00302317
+566-into_ecc 0 0
+InstCount-into_ecc 1 0.00325471
+---
+Fail-fail_3
+Fail-fail_4
+466-test_1
+466-test_2
+466-test_3
+466-test_4
+466-test_5
+466-test_6
+466-test_7
+466-test_8
+466-test_15
+566-test_9
+566-test_10
+566-test_11
+566-test_12
+566-test_13
+566-test_14
+566-test_16
+566-test_17
+566-flip
+566-syndrome_ecc
+566-into_ecc

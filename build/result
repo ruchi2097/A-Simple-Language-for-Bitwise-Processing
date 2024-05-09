@@ -1,0 +1,852 @@
+[  1%] [BISON][Parser] Building parser with bison 3.8.2
+p1.y:165.3-11: warning: type clash on default action: <val> != <id> [-Wother]
+  165 | | ID NUMBER
+      |   ^~~~~~~~~
+p1.y:222.3-51: warning: type clash on default action: <val> != <> [-Wother]
+  222 | | LPAREN ensemble RPAREN LBRACKET ensemble RBRACKET
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p1.y:223.3-35: warning: type clash on default action: <val> != <> [-Wother]
+  223 | | REDUCE AND LPAREN ensemble RPAREN
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p1.y:224.3-34: warning: type clash on default action: <val> != <> [-Wother]
+  224 | | REDUCE OR LPAREN ensemble RPAREN
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p1.y:225.3-35: warning: type clash on default action: <val> != <> [-Wother]
+  225 | | REDUCE XOR LPAREN ensemble RPAREN
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p1.y:226.3-36: warning: type clash on default action: <val> != <> [-Wother]
+  226 | | REDUCE PLUS LPAREN ensemble RPAREN
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+p1.y:227.3-32: warning: type clash on default action: <val> != <> [-Wother]
+  227 | | EXPAND  LPAREN ensemble RPAREN
+      |   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[  2%] [FLEX][Scanner] Building scanner with flex 2.6.4
+[  3%] Building CXX object CMakeFiles/p1.dir/p1.y.cpp.o
+[  4%] Building CXX object CMakeFiles/p1.dir/p1.lex.cpp.o
+[  5%] Linking CXX executable p1
+[  6%] Built target p1
+[  8%] Built target llvm-inst-count
+[  9%] Generating test_0.bc
+; ModuleID = 'test_0'
+source_filename = "test_0"
+
+define i32 @test_0() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+FINAL
+NUMBER 0
+[ 10%] Generating test_0.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 11%] Linking C executable test_0
+[ 13%] Built target test_0
+[ 14%] Generating test_1.bc
+; ModuleID = 'test_1'
+source_filename = "test_1"
+
+define i32 @test_1() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+FINAL
+NUMBER 2
+COMMA
+NUMBER 1
+ENDLINE
+[ 15%] Generating test_1.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 16%] Linking C executable test_1
+[ 17%] Built target test_1
+[ 18%] Generating test_2.bc
+; ModuleID = 'test_2'
+source_filename = "test_2"
+
+define i32 @test_2() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+ENDLINE
+FINAL
+ID a
+ENDLINE
+[ 19%] Generating test_2.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 20%] Linking C executable test_2
+[ 21%] Built target test_2
+[ 22%] Generating test_3.bc
+; ModuleID = 'test_3'
+source_filename = "test_3"
+
+define i32 @test_3() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+ENDLINE
+ID b
+ASSIGN
+NUMBER 1
+ENDLINE
+ID c
+ASSIGN
+NUMBER 1
+ENDLINE
+FINAL
+ID a
+COMMA
+ID b
+COMMA
+ID c
+ENDLINE
+[ 23%] Generating test_3.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 25%] Linking C executable test_3
+[ 26%] Built target test_3
+[ 27%] Generating test_4.bc
+; ModuleID = 'test_4'
+source_filename = "test_4"
+
+define i32 @test_4() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+ENDLINE
+ID b
+ASSIGN
+ID a
+NUMBER 1
+XOR
+ID a
+NUMBER 4
+XOR
+ID a
+NUMBER 8
+ENDLINE
+FINAL
+ID b
+[ 28%] Generating test_4.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 29%] Linking C executable test_4
+[ 30%] Built target test_4
+[ 31%] Generating test_5.bc
+; ModuleID = 'test_5'
+source_filename = "test_5"
+
+define i32 @test_5() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID a
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+ENDLINE
+FINAL
+ID a
+NUMBER 0
+COMMA
+ID a
+NUMBER 1
+COMMA
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 3
+COMMA
+ID a
+NUMBER 4
+ENDLINE
+[ 32%] Generating test_5.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 33%] Linking C executable test_5
+[ 34%] Built target test_5
+[ 35%] Generating test_6.bc
+; ModuleID = 'test_6'
+source_filename = "test_6"
+
+define i32 @test_6() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+ID b
+ASSIGN
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 1
+COMMA
+ID a
+NUMBER 0
+ENDLINE
+FINAL
+ID b
+[ 36%] Generating test_6.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 38%] Linking C executable test_6
+[ 39%] Built target test_6
+[ 40%] Generating test_7.bc
+; ModuleID = 'test_7'
+source_filename = "test_7"
+
+define i32 @test_7() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+ID b
+ASSIGN
+ID a
+MUL
+ID a
+MINUS
+ID a
+ENDLINE
+FINAL
+ID b
+NUMBER 12
+COMMA
+ID b
+NUMBER 11
+COMMA
+ID b
+NUMBER 10
+COMMA
+ID b
+NUMBER 9
+COMMA
+ID b
+NUMBER 8
+COMMA
+ID b
+NUMBER 7
+COMMA
+ID b
+NUMBER 6
+COMMA
+ID b
+NUMBER 5
+[ 41%] Generating test_7.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 42%] Linking C executable test_7
+[ 43%] Built target test_7
+[ 44%] Generating test_8.bc
+; ModuleID = 'test_8'
+source_filename = "test_8"
+
+define i32 @test_8() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+COMMA
+ID y
+ENDLINE
+ID z
+ASSIGN
+ID x
+MUL
+ID y
+MOD
+NUMBER 115
+ENDLINE
+ID z
+ASSIGN
+ID z
+DIV
+NUMBER 7
+ENDLINE
+FINAL
+ID z
+PLUS
+NUMBER 1
+COMMA
+NUMBER 1
+[ 45%] Generating test_8.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 46%] Linking C executable test_8
+[ 47%] Built target test_8
+[ 48%] Generating test_15.bc
+; ModuleID = 'test_15'
+source_filename = "test_15"
+
+define i32 @test_15() {
+entry:
+  ret i32 0
+}
+IN
+ID a
+ENDLINE
+FINAL
+ID a
+NUMBER 10
+COMMA
+ID a
+NUMBER 9
+COMMA
+ID a
+NUMBER 8
+COMMA
+ID a
+NUMBER 7
+COMMA
+ID a
+NUMBER 6
+COMMA
+ID a
+NUMBER 5
+COMMA
+ID a
+NUMBER 4
+COMMA
+ID a
+NUMBER 3
+COMMA
+ID a
+NUMBER 2
+COMMA
+ID a
+NUMBER 1
+ENDLINE
+[ 50%] Generating test_15.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 51%] Linking C executable test_15
+[ 52%] Built target test_15
+[ 53%] Generating test_9.bc
+; ModuleID = 'test_9'
+source_filename = "test_9"
+
+define i32 @test_9() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+ENDLINE
+ID and
+ASSIGN
+ID x
+NUMBER 15
+AND
+ID x
+NUMBER 14
+AND
+ID x
+NUMBER 13
+AND
+ID x
+NUMBER 12
+AND
+ID x
+NUMBER 11
+AND
+ID x
+NUMBER 10
+AND
+ID x
+NUMBER 9
+AND
+ID x
+NUMBER 8
+AND
+ID x
+NUMBER 7
+AND
+ID x
+NUMBER 6
+AND
+ID x
+NUMBER 5
+AND
+ID x
+NUMBER 4
+AND
+ID x
+NUMBER 3
+AND
+ID x
+NUMBER 2
+AND
+ID x
+NUMBER 1
+AND
+ID x
+NUMBER 0
+ENDLINE
+ID or
+ASSIGN
+ID x
+NUMBER 15
+OR
+ID x
+NUMBER 14
+OR
+ID x
+NUMBER 13
+OR
+ID x
+NUMBER 12
+OR
+ID x
+NUMBER 11
+OR
+ID x
+NUMBER 10
+OR
+ID x
+NUMBER 9
+OR
+ID x
+NUMBER 8
+OR
+ID x
+NUMBER 7
+OR
+ID x
+NUMBER 6
+OR
+ID x
+NUMBER 5
+OR
+ID x
+NUMBER 4
+OR
+ID x
+NUMBER 3
+OR
+ID x
+NUMBER 2
+OR
+ID x
+NUMBER 1
+OR
+ID x
+NUMBER 0
+ENDLINE
+ID xor
+ASSIGN
+ID x
+NUMBER 15
+XOR
+ID x
+NUMBER 14
+XOR
+ID x
+NUMBER 13
+XOR
+ID x
+NUMBER 12
+XOR
+ID x
+NUMBER 11
+XOR
+ID x
+NUMBER 10
+XOR
+ID x
+NUMBER 9
+XOR
+ID x
+NUMBER 8
+XOR
+ID x
+NUMBER 7
+XOR
+ID x
+NUMBER 6
+XOR
+ID x
+NUMBER 5
+XOR
+ID x
+NUMBER 4
+XOR
+ID x
+NUMBER 3
+XOR
+ID x
+NUMBER 2
+XOR
+ID x
+NUMBER 1
+XOR
+ID x
+NUMBER 0
+ENDLINE
+FINAL
+ID and
+COMMA
+ID xor
+COMMA
+ID or
+[ 54%] Generating test_9.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 55%] Linking C executable test_9
+[ 56%] Built target test_9
+[ 57%] Generating test_10.bc
+; ModuleID = 'test_10'
+source_filename = "test_10"
+
+define i32 @test_10() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+ENDLINE
+ID y
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+COMMA
+NUMBER 1
+ENDLINE
+ID index
+ASSIGN
+NUMBER 3
+ENDLINE
+FINAL
+BINV
+ID y
+LBRACKET
+NUMBER 2
+RBRACKET
+ENDLINE
+[ 58%] Generating test_10.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 59%] Linking C executable test_10
+[ 60%] Built target test_10
+[ 61%] Generating test_11.bc
+; ModuleID = 'test_11'
+source_filename = "test_11"
+
+define i32 @test_11() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID y
+ASSIGN
+INV
+LPAREN
+NUMBER 15
+MOD
+NUMBER 10
+RPAREN
+ENDLINE
+ID z
+ASSIGN
+ID y
+NUMBER 0
+COMMA
+ID y
+NUMBER 2
+COMMA
+ID y
+NUMBER 1
+COMMA
+ID y
+NUMBER 3
+ENDLINE
+ID w
+ASSIGN
+ID z
+DIV
+NUMBER 3
+ENDLINE
+FINAL
+ID w
+ENDLINE
+[ 63%] Generating test_11.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 64%] Linking C executable test_11
+[ 65%] Built target test_11
+[ 66%] Generating test_12.bc
+; ModuleID = 'test_12'
+source_filename = "test_12"
+
+define i32 @test_12() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID y
+ASSIGN
+INV
+LPAREN
+NUMBER 15
+MOD
+NUMBER 10
+RPAREN
+ENDLINE
+ID y
+ASSIGN
+ID y
+NUMBER 1
+COMMA
+ID y
+NUMBER 3
+COMMA
+ID y
+NUMBER 0
+COMMA
+ID y
+NUMBER 0
+ENDLINE
+ID y
+ASSIGN
+ID y
+DIV
+NUMBER 3
+ENDLINE
+FINAL
+ID y
+PLUS
+NUMBER 1
+ENDLINE
+[ 67%] Generating test_12.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 68%] Linking C executable test_12
+[ 69%] Built target test_12
+[ 70%] Generating test_13.bc
+; ModuleID = 'test_13'
+source_filename = "test_13"
+
+define i32 @test_13() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID x
+ASSIGN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+ENDLINE
+FINAL
+LPAREN
+ID x
+NUMBER 2
+COMMA
+ID x
+NUMBER 1
+COMMA
+ID x
+NUMBER 0
+RPAREN
+LBRACKET
+ID x
+NUMBER 2
+COMMA
+ID x
+NUMBER 1
+RBRACKET
+[ 71%] Generating test_13.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 72%] Linking C executable test_13
+[ 73%] Built target test_13
+[ 75%] Generating test_14.bc
+; ModuleID = 'test_14'
+source_filename = "test_14"
+
+define i32 @test_14() {
+entry:
+  ret i32 0
+}
+IN
+NONE
+ENDLINE
+ID x
+ASSIGN
+LPAREN
+LPAREN
+NUMBER 1
+COMMA
+NUMBER 0
+COMMA
+NUMBER 0
+RPAREN
+PLUS
+LPAREN
+NUMBER 1
+RPAREN
+RPAREN
+XOR
+LPAREN
+NUMBER 1
+COMMA
+NUMBER 1
+COMMA
+NUMBER 1
+RPAREN
+ENDLINE
+FINAL
+ID x
+[ 76%] Generating test_14.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 77%] Linking C executable test_14
+[ 78%] Built target test_14
+[ 79%] Generating test_16.bc
+; ModuleID = 'test_16'
+source_filename = "test_16"
+
+define i32 @test_16() {
+entry:
+  ret i32 0
+}
+IN
+ID x
+COMMA
+ID y
+ENDLINE
+ID xinv
+ASSIGN
+EXPAND
+LPAREN
+ID x
+NUMBER 31
+RPAREN
+ENDLINE
+ID yinv
+ASSIGN
+EXPAND
+LPAREN
+ID y
+NUMBER 31
+RPAREN
+ENDLINE
+ID absx
+ASSIGN
+LPAREN
+ID x
+XOR
+ID xinv
+RPAREN
+PLUS
+ID x
+NUMBER 31
+ENDLINE
+ID absy
+ASSIGN
+LPAREN
+ID y
+XOR
+ID yinv
+RPAREN
+PLUS
+ID y
+NUMBER 31
+ENDLINE
+FINAL
+LPAREN
+ID absx
+MINUS
+ID absy
+RPAREN
+MUL
+LPAREN
+ID absx
+MINUS
+ID absy
+RPAREN
+[ 80%] Generating test_16.bc.o
+warning: overriding the module target triple with aarch64-unknown-linux-gnu [-Woverride-module]
+1 warning generated.
+[ 81%] Linking C executable test_16
+make[2]: *** Deleting file 'tests/test_16'
+make[2]: *** [tests/CMakeFiles/test_16.dir/build.make:108: tests/test_16] Interrupt
+make[1]: *** [CMakeFiles/Makefile2:718: tests/CMakeFiles/test_16.dir/all] Interrupt
+make: *** [Makefile:101: all] Interrupt

@@ -1,0 +1,4 @@
+in none
+a = 1,0,0
+b = a1
+return b

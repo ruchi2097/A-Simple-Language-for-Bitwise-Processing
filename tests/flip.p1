@@ -1,0 +1,5 @@
+in none
+b=3;
+a=0;
+a[1]=!b;
+final a
